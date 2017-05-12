@@ -1,0 +1,61 @@
+<% include partials/header %>
+
+<li>
+    <a href="/logout">Logout</a>
+</li>
+
+<div class="container">
+    <div class="row">
+        
+
+    
+        <div style="width: 30%; margin: 0 auto;">
+            <h1>Edit <%= succulent.commonName %></h1>
+            <form action='/succulents/<%= succulent._id %>?_method=PUT' enctype="multipart/form-data" method='post'>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="succulent[commonName]" value="<%= succulent.commonName %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[scienceName]" value="<%= succulent.scienceName %>">
+                </div>
+                <div class="form-group">
+                    <img class="form-control" src="./howarthia.jpg">
+                    <input class="form-control" type='file'  name="succulent[upl]">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[catagory]" value="<%= succulent.catagory %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[color]" value="<%= succulent.color %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[Keyword]" value="<%= succulent.keyword %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[order]" value="<%= succulent.order %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[family]" value="<%= succulent.family %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[subFamily]" value="<%= succulent.subFamily %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="succulent[species]" value="<%= succulent.species %>">
+                </div>
+                
+                <div class="form-group">
+                    <textarea class="form-control" type="text" name="succulent[description]" value="<%= succulent.information %>"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-lrg btn-primary btn-block">Submit</button>
+                </div>
+                
+                
+            </form>
+            <a href="/">Go back</a>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

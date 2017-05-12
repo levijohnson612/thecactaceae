@@ -1,0 +1,62 @@
+<% include partials/header %>
+
+<li>
+    <a href="/logout">Logout</a>
+</li>
+
+<div class="container">
+    <div class="row">
+        
+
+    
+        <div style="width: 30%; margin: 0 auto;">
+            <h1> Create a new succulent </h1>
+            <form action='/succulents' enctype="multipart/form-data" method='post'>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="commonName" placeholder="Common Name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="scienceName" placeholder='Scientific name'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="catagory" placeholder='Catagory'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="color" placeholder='Color'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="Keyword" placeholder='Keywords'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="order" placeholder='Order'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="family" placeholder='Family'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="subFamily" placeholder='Sub-Family'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="species" placeholder='Species'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='text'  name="native" placeholder='Native to'>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="text" name="description" placeholder="Information"></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type='file' name="upl">
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-lrg btn-primary btn-block">Submit</button>
+                </div>
+                
+                
+            </form>
+            <a href="/">Go back</a>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

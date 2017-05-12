@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+    <div class="container">
+
+        <div class="showImg">
+            <img class="img-responsive" src="../uploads/<%= succulents.image %>">
+        </div>
+        <div class="container informationBox"></div>
+        
+            <div class="container cName" width="200px">
+                <h6>COMMON NAME</h6>
+                <h1 class=""> <%= succulents.commonName %> </h1>
+            </div>
+            
+            <div class="container sName">
+                <h6>SCIENTIFIC NAME</h6>
+                <h1> <%= succulents.scienceName %> </h1>
+            </div>
+            
+            <div class="container description"> 
+                <h6>INFORMATION</h6>
+                <p> <%= succulents.description %> </p>
+            </div>
+            <form action="/succulents/<%= succulents._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+                
+            </div>
+        </div>
+    </div>
+
+
+<% include partials/footer %>
