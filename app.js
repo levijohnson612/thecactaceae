@@ -56,7 +56,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(indexRoutes);
 app.use("/succulents", succulentRoutes);
 
-//listen to c9 port
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("Succulent Resource Has Started");
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
