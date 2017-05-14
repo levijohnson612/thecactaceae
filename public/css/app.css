@@ -1,25 +1,72 @@
-
-.navbar-default {
-    margin: 0px;
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+    margin: 0;
 }
 
-.thumbnail {
-    padding: .5px .5px .5px .5px !important;
-}
-
-.navbar {
-  position: fixed;
-  width: 100%;
-  z-index: 500;
-}
-
+/*====NAVBAR===*/
 .boxTitle {
     text-align: center;
     margin: 0px 0px 0px 0px !important;
     font-size: 18px;
     margin-top: -20px !important;
 }
+.menuCenter {
 
+  line-height: 50px;
+  white-space: nowrap;
+  margin-left: 4%;
+  margin-right: 4%;
+  bordr-bottom:
+}
+nav {
+  background-color: white;
+  box-shadow: 0 1px 1px 0px black;
+  font-size: 20px;
+  height: 50px;
+  width: 100%;
+  z-index: 600;
+  position: absolute;
+}
+
+.instagramIcon {
+  margin-top:13px;
+  float: right;
+}
+.icon {
+  height: 15px;
+}
+
+/*====EXIT NAVBAR===*/
+
+/*====JUMBOTRON====*/
+.jumbotron {
+  padding-top: 50px;
+  z-index: 1;
+  height: 260px;
+  background-image: url('/images/cactusbanner.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: contain;
+  text-align: center;
+}
+
+
+.title {
+  display:inline;
+  margin-top: 30%;
+  font-size: 3.2vw;
+  margin: 0;
+}
+#slash {
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  margin-right: 10px;
+}
+
+
+/*====EXIT JUMBOTRON====*/
 .torso {
     margin-left: 10%;
     margin-right: 10%;
@@ -36,48 +83,6 @@ width: auto;
 .grid-item {
     width: 300px;
     margin-bottom: 5px !important;
-}
-hr {
-  -moz-border-bottom-colors: none;
- -moz-border-image: none;
- -moz-border-left-colors: none;
- -moz-border-right-colors: none;
- -moz-border-top-colors: none;
- border-color: #EEEEEE -moz-use-text-color #FFFFFF;
- border-style: solid none;
- border-width: 1px 0;
- margin: 18px 0;
- }
-.jumbotron {
-   margin-bottom: 0px;
-   height: 400px;
-   color: white;
-   text-shadow: black 0.3em 0.3em 0.3em;
-   background: transparent !important;
- }
- .bg {
-  margin-bottom: 50px;
-  /*background: url("/images/cactusbanner.jpg")no-repeat;*/
-  background: #43C6AC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  contain: content;
-  background-size: cover;
-  width: 100%;
-  height: 350px; /*same height as jumbotron */
-  top:0;
-  left:0;
-  z-index: -1;
-  background-color: white;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
-body {
-    background-color: #efdfb9 !important;
-    font-family: 'Amatic SC', cursive;
-/*font-family: 'Open Sans', sans-serif;*/
 }
 
 .box {
