@@ -2,27 +2,25 @@
 </div>
   <div class="jumbotron">
     <!-- <img class="jumboImg" src="././images/cactusbanner"> -->
-      <h1 class="title"> THE <span id="slash">/</span>CACTACEAE </h1>
+      <h1 class="title"> SUCCULENT <span id="slash">/</span>PORN </h1>
   </div>
 
 
 
-
-
-        <div class="grid" data-masonry='{"gutter": 10, "isFitWidth": true,"itemSelector": ".grid-item" }'>
-            <% succulents.forEach(function(succulents){ %>
-
+        <div class="grid">
+            <div class="grid-sizer"></div>
+              <% succulents.forEach(function(succulents){ %>
                 <div class="grid-item">
-                    <h6 class="boxTitle"><%= succulents.scienceName %></h6>
-                    <a href="/succulents/<%= succulents._id %>">
-                        <div class="thumbnail">
-                        <img src="./uploads/<%= succulents.image %>">
-                        </a>
-                        </div>
-                    </div>
-            <% }); %>
-</div>
 
+                      <a href="/succulents/<%= succulents._id %>">
+                       <img src="./uploads/<%= succulents.image %>">
+                       <h6 class="boxTitle"><%= succulents.scienceName %></h6>
+                        </a>
+                </div>
+
+            <% }); %>
+
+</div>
 
 
 <% include partials/footer %>

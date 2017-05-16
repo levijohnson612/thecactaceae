@@ -1,16 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-    margin: 0;
+  margin: 0;
 }
 
 /*====NAVBAR===*/
-.boxTitle {
-    text-align: center;
-    margin: 0px 0px 0px 0px !important;
-    font-size: 18px;
-    margin-top: -20px !important;
-}
+text-align: center;
+margin: 0px 0px 0px 0px !important;
+font-size: 18px;
+margin-top: -20px !important;
 .menuCenter {
 
   line-height: 50px;
@@ -26,7 +30,7 @@ nav {
   height: 50px;
   width: 100%;
   z-index: 600;
-  position: absolute;
+  position: fixed;
 }
 
 .instagramIcon {
@@ -65,47 +69,69 @@ nav {
   margin-right: 10px;
 }
 
-
 /*====EXIT JUMBOTRON====*/
-.torso {
-    margin-left: 10%;
-    margin-right: 10%;
-}
+
+/*MASONRY*/
 
 .grid {
-    margin: 0 auto !important;
+  max-width: 69em;
+	margin: 30px auto;
+	padding: 0;
 }
-#content {
-margin: 0 auto;
-width: auto;
+/*clearfix*/
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
+.grid-sizer,
 .grid-item {
-    width: 300px;
-    margin-bottom: 5px !important;
+}
+.grid-item {
+  border-radius: 5px;
+
+  /*display: block;*/
+	float: left;
+	padding: 7px;
+	width: 33%;
+	/*opacity: 0;*/
 }
 
-.box {
-    padding: 5px 5px 5px 5px !important;
+.grid-item img {
+  border-radius: 5px;
+  outline: none;
+	border: none;
+	display: block;
+	max-width: 100%;
+  position: relative;
 }
-.cName, .sName {
-    text-align: center;
+
+.boxTitle {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  position: absolute;
+  left: 13px;
+  top: 5px;
+  right: auto;
+  opacity: 0.5;
+  color: white;
 }
 
 
-.header {
-    text-align: center;
-    background-color: #efdfb9;
-    font-family: 'Cormorant SC', serif;
+@media screen and (max-width: 900px) {
+	.grid .grid-item {
+		width: 50%;
+	}
 }
 
-.container {
-    margin: auto !important;
-    width: 90% !important;
-    padding: 10px !important;
+@media screen and (max-width: 400px) {
+	.grid .grid-item {
+		width: 100%;
+	}
 }
 
-.showImg {
-  margin-left: 0 auto;
-  margin-right: 0 auto;
-}
+/*EXIT MASONRY*/
