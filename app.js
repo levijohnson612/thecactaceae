@@ -56,12 +56,12 @@ passport.deserializeUser(User.deserializeUser());
 app.use(indexRoutes);
 app.use("/succulents", succulentRoutes);
 
-// //listen to c9 port
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("Succulent Resource Has Started");
-// });
-
-//local developement
-app.listen(3000, function(){
+//listen to port
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Succulent Resource Has Started");
 });
+
+//local developement
+// app.listen(3000, function(){
+//     console.log("Succulent Resource Has Started");
+// });
