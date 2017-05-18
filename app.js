@@ -11,10 +11,12 @@ var express                 = require('express'),
     passport                = require('passport'),
     localStrategy           = require('passport-local'),
     Succulent               = require('./models/succulents'),
-    User                    = require('./models/user');
+    User                    = require('./models/user'),
+    Blog                    = require('./models/blogpost');
 
 var succulentRoutes = require('./routes/succulents'),
-    indexRoutes     = require('./routes/index');
+    indexRoutes     = require('./routes/index'),
+    blogRoutes      = require('./routes/blog');
 
 //connect to mLAB
 mongoose.connect('mongodb://levijohnson612:Potatotime22@ds115411.mlab.com:15411/succulent-porn');
@@ -43,8 +45,9 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//Create new user
-// User.register(new User({username: "Levishazam"}), "Potatotime22", function(err, user){
+
+// // Create new user
+// User.register(new User({username: "grace"}), "Sister22", function(err, user){
 //     if(err){
 //         console.log(err);
 //     }
@@ -55,13 +58,14 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(indexRoutes);
 app.use("/succulents", succulentRoutes);
+app.use("/blog", blogRoutes);
 
 //listen to port
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("Succulent Resource Has Started");
-});
-
-// // local developement
-// app.listen(8080, function(){
+// app.listen(process.env.PORT, process.env.IP, function(){
 //     console.log("Succulent Resource Has Started");
 // });
+
+// local developement
+app.listen(8080, function(){
+    console.log("Succulent Resource Has Started");
+});
