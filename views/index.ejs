@@ -1,8 +1,6 @@
 <% include partials/header %>
-</div>
   <div class="jumbotron">
     <!-- <img class="jumboImg" src="././images/cactusbanner"> -->
-      <h1 class="title"> SUCCULENT <span id="slash">/</span>PORN </h1>
   </div>
 
 
@@ -12,10 +10,9 @@
               <% succulents.forEach(function(succulents){ %>
                 <div class="grid-item">
 
-                      <a href="/succulents/<%= succulents._id %>">
+
                        <img src="./uploads/<%= succulents.image %>">
-                       <h6 class="boxTitle"><%= succulents.scienceName %></h6>
-                        </a>
+                       <h6 class="boxTitle"><%= succulents.commonName %></h6>
                 </div>
 
             <% }); %>

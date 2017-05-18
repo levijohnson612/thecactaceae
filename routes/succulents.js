@@ -48,7 +48,7 @@ router.get('/:id', function(req, res) {
 })
 
 //DESTROY SUCCULENT
-router.delete('/:id', function(req, res){
+router.delete('/:id', isLoggedIn, function(req, res){
     Succulent.findByIdAndRemove(req.params.id, function(err){
         if(err){
             res.redirect('/');
@@ -61,7 +61,7 @@ router.delete('/:id', function(req, res){
 //POST NEW SUCCULENT IF LOGGED IN
 router.post('/', isLoggedIn, multer({ dest: "./uploads"}).single('upl'), function(req, res, next) {
    //get data from form and add to succulents array
-   
+
    var flower = req.body.flower;
    var texture = req.body.texture;
    var keyword = req.body.keyword;

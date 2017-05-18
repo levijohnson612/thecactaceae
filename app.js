@@ -61,7 +61,7 @@ app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Succulent Resource Has Started");
 });
 
-//local developement
-// app.listen(3000, function(){
+// // local developement
+// app.listen(8080, function(){
 //     console.log("Succulent Resource Has Started");
 // });

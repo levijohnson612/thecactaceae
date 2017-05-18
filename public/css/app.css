@@ -11,17 +11,11 @@ body {
 }
 
 /*====NAVBAR===*/
-text-align: center;
-margin: 0px 0px 0px 0px !important;
-font-size: 18px;
-margin-top: -20px !important;
 .menuCenter {
-
   line-height: 50px;
   white-space: nowrap;
   margin-left: 4%;
   margin-right: 4%;
-  bordr-bottom:
 }
 nav {
   background-color: white;
@@ -34,12 +28,15 @@ nav {
 }
 
 .instagramIcon {
-  margin-top:13px;
+  margin-top: 12px;
   float: right;
 }
-.icon {
-  height: 15px;
+
+.nav_title {
+  text-decoration: none;
+  color: #000;
 }
+
 
 /*====EXIT NAVBAR===*/
 
@@ -119,6 +116,7 @@ nav {
   right: auto;
   opacity: 0.5;
   color: white;
+  font-weight: 300;
 }
 
 
