@@ -60,12 +60,12 @@ app.use(indexRoutes);
 app.use("/succulents", succulentRoutes);
 app.use("/blog", blogRoutes);
 
-//listen to port
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("Succulent Resource Has Started");
-// });
-
-// local developement
-app.listen(8080, function(){
+listen to port
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Succulent Resource Has Started");
 });
+
+// // local developement
+// app.listen(8080, function(){
+//     console.log("Succulent Resource Has Started");
+// });
